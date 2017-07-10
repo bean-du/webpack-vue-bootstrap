@@ -4,19 +4,30 @@
     <div class="from-group">
       <label>{{ msg }}</label>
       <input type="text" class="from-control" v-model="msg">
-      <button class="btn btn-success btn-sm">测试</button>
+      <button class="btn btn-success btn-sm" >测试</button>
     </div>
+    <Hello @countData="getData"></Hello>
+    <World ></World>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  import Hello from './Hello.vue'
+  import World from './World.vue'
+  export default {
+      components : { Hello,World },
+      name: 'app',
+      data () {
+          return {
+            msg: 'Welcome to Your Vue.js App'
+          }
+      },
+      methods : {
+          getData (data) {
+              this.msg = data;
+              console.log(data)
+          }
+      }
 }
 </script>
 

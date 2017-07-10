@@ -45,7 +45,7 @@ module.exports = {
             { test: /\.(ttf|eot)$/, loader: 'file-loader' },
             { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports-loader?jQuery=jquery' },
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(png|jpg|gif|svg|webp)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]?[hash]'
