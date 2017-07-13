@@ -19,8 +19,9 @@
         },
         props: ['msMsg'],
         methods : {
+
             world () {
-                this.$emit('countData',this.msg)
+
             }
         }
     }

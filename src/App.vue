@@ -1,25 +1,34 @@
 <template>
   <div id="app">
+    <my-head></my-head>
     <img src="./assets/logo.png">
     <div class="from-group">
       <label>{{ msg }}</label>
       <input type="text" class="from-control" v-model="msg">
       <button class="btn btn-success btn-sm" >测试</button>
     </div>
-    <Hello @countData="getData"></Hello>
+    <Hello @countData="getData" :msMsg="msg"></Hello>
     <World ></World>
+    <my-table :tableDatae="table"></my-table>
   </div>
 </template>
 
 <script>
   import Hello from './Hello.vue'
   import World from './World.vue'
+  import myTable from './vueTable.vue'
+  import myHead from  './head.vue'
   export default {
-      components : { Hello,World },
+      components : { Hello,World,myTable,myHead },
       name: 'app',
       data () {
           return {
-            msg: 'Welcome to Your Vue.js App'
+              msg: 'Welcome to Your Vue.js App',
+              table : [
+                  {name :'beijin',city : '北京',code : '010'},
+                  {name :'wuhan',city : '武汉',code : '027'},
+                  {name :'shanghai',city : '上海',code : '020'},
+              ]
           }
       },
       methods : {
@@ -27,6 +36,9 @@
               this.msg = data;
               console.log(data)
           }
+      },
+      computed: {
+
       }
 }
 </script>
