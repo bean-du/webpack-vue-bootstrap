@@ -7,20 +7,22 @@
       <div class="container theme-showcase">
       <banner></banner>
       </div>
+      <div class="col-xs-4">
+        <left-list></left-list>
+      </div><div class="col-xs-8">
+        <list-right></list-right>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-  import Hello from './Hello.vue'
-  import World from './World.vue'
-  import myTable from './vueTable.vue'
   import myHead from  './head.vue'
-  import todoList from  './todoList.vue'
-  import todoInput from './toduInput.vue'
   import banner from './banner.vue'
+  import leftList from  './leftPage.vue'
+  import listRight from  './listRight.vue'
   export default {
-      components : { Hello,World,myTable,myHead,todoList,todoInput,banner },
+      components : { myHead,banner,leftList,listRight },
       name: 'app',
       data () {
           return {
