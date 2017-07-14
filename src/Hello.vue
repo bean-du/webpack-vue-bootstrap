@@ -2,16 +2,14 @@
     <div id="hello">
         <div class="from-group">
             <label>{{ counter }}</label>
-            <input type="text" class="from-control" v-model="msMsg">
+            <input type="text" class="from-control" v-model="MSg">
             <button class="btn btn-success btn-sm" @click="count">{{ counter }}</button>
-            <button class="btn btn-success btn-sm" @click="pass">pass</button>
+            <!--<button class="btn btn-success btn-sm" @click="pass">pass</button>-->
         </div>
     </div>
 </template>
 
 <script>
-    import Vue from 'vue';
-    var bus = new Vue();
     export default {
         name: 'hello',
         data () {
@@ -21,16 +19,18 @@
             }
         },
         props: ['msMsg'],
-
-
         methods : {
             count () {
                 this.$emit('countData',this.msg)
             },
             pass(){
-               bus.$emit('test-v','This from Hello')
-            }
 
+            }
+        },
+        computed : {
+            MSg(){
+                return this.$store.state.message
+            }
         }
     }
 </script>

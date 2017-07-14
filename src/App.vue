@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-    <my-head></my-head>
-    <img src="./assets/logo.png">
-    <div class="from-group">
-      <label>{{ msg }}</label>
-      <input type="text" class="from-control" v-model="msg">
-      <button class="btn btn-success btn-sm" >测试</button>
+    <div class="container">
+      <div class="header clearfix">
+      <my-head></my-head>
+      </div>
+      <div class="container theme-showcase">
+      <banner></banner>
+      </div>
     </div>
-    <Hello @countData="getData" :msMsg="msg"></Hello>
-    <World ></World>
-    <my-table :tableDatae="table"></my-table>
   </div>
 </template>
 
@@ -18,8 +16,11 @@
   import World from './World.vue'
   import myTable from './vueTable.vue'
   import myHead from  './head.vue'
+  import todoList from  './todoList.vue'
+  import todoInput from './toduInput.vue'
+  import banner from './banner.vue'
   export default {
-      components : { Hello,World,myTable,myHead },
+      components : { Hello,World,myTable,myHead,todoList,todoInput,banner },
       name: 'app',
       data () {
           return {
@@ -35,10 +36,12 @@
           getData (data) {
               this.msg = data;
               console.log(data)
-          }
+          },
       },
       computed: {
-
+          storeMsg (){
+              return this.$store.state.message
+          }
       }
 }
 </script>
