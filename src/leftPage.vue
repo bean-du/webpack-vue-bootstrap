@@ -30,4 +30,7 @@
         background-color:  #41B883;
         border-color:  #41B883;
     }
+    #leftPage {
+        text-align: left;
+    }
 </style>

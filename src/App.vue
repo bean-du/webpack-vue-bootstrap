@@ -1,15 +1,13 @@
 <template>
   <div id="app">
     <div class="container">
-      <div class="header clearfix">
       <my-head></my-head>
-      </div>
       <div class="container theme-showcase">
       <banner></banner>
       </div>
-      <div class="col-xs-4">
+      <div class="col-md-4">
         <left-list></left-list>
-      </div><div class="col-xs-8">
+      </div><div class="col-md-8">
         <list-right></list-right>
       </div>
     </div>

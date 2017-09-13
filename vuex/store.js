@@ -23,7 +23,10 @@ const store = new Vuex.Store({
         articleList : [
             {id : 1, title : 'learn laravel passport', describe : 'Can you describe what you saw to [ for] me?...',imgUrl : '/src/assets/logo.png'},
             {id : 2, title : 'learn laravel valet', describe : 'Can you describe what you saw to [ for] me?...', imgUrl :'/src/assets/logo.png'},
-            {id : 3, title : 'learn laravel admin', describe : 'Can you describe what you saw to [ for] me?...', imgUrl :'/src/assets/logo.png'}
+            {id : 3, title : 'learn laravel admin', describe : 'Can you describe what you saw to [ for] me?...', imgUrl :'/src/assets/logo.png'},
+            {id : 1, title : 'learn laravel passport', describe : 'Can you describe what you saw to [ for] me?...',imgUrl : '/src/assets/logo.png'},
+            {id : 2, title : 'learn laravel valet', describe : 'Can you describe what you saw to [ for] me?...', imgUrl :'/src/assets/logo.png'},
+            {id : 3, title : 'learn laravel admin', describe : 'Can you describe what you saw to [ for] me?...', imgUrl :'/src/assets/logo.png'},
         ]
     },
     mutations: {
